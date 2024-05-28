@@ -5,7 +5,7 @@
 
     <application
         android:usesCleartextTraffic="true"
-        android:label="PPSolution"
+        android:label="P&amp;P Solution"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

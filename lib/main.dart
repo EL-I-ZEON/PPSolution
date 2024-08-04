@@ -182,6 +182,11 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.white,  // Background color
+          selectedItemColor: Colors.black,  // Selected item color
+          unselectedItemColor: Colors.black,  // Unselected item color
+          showSelectedLabels: false,  // Hide the selected item label
+          showUnselectedLabels: false,  // Hide the unselected item label
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.phone),
@@ -194,6 +199,10 @@ class _HomePageState extends State<HomePage> {
             BottomNavigationBarItem(
               icon: Icon(Icons.contact_mail),
               label: 'Email',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.navigation),
+              label: 'Navigácia',
             ),
           ],
           onTap: (index) {
@@ -215,7 +224,7 @@ class _HomePageState extends State<HomePage> {
                         child: ListBody(
                           children: [
                             Text(
-                                'P&P Solution pôsobí na trhu viac ako 20 rokov a poskytuje exkluzivitu v oblasti realít, stavieb, správy nehnutelností, financovania, účtovníctva a poradenstva.'
+                                'P&P Solution pôsobí na trhu viac ako 20 rokov a poskytuje exkluzivitu v oblasti realít, stavieb, správy nehnuteľností, financovania, účtovníctva a poradenstva.'
                                     '\n\nKancelária: Skladná 1, Košice 040 01'
                                     '\nFakturačné údaje: P&P Solution s.r.o.'
                                     '\nSídlo: Maurerová č. 13 Košice 040 22'
@@ -243,6 +252,11 @@ class _HomePageState extends State<HomePage> {
                   path: 'info@ppsolution.sk',
                 );
                 launch(emailLaunchUri.toString());
+                break;
+              case 3:
+                final Uri navigationUri = Uri.parse(
+                    'https://www.google.com/maps/dir/?api=1&destination=Skladná+1,+Košice+Slovakia');
+                launch(navigationUri.toString());
                 break;
             }
           },

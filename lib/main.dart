@@ -17,6 +17,7 @@ class PPSolutionApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: HomePage(),
+      debugShowCheckedModeBanner: false
     );
   }
 }
